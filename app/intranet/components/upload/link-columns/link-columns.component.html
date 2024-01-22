@@ -1,0 +1,36 @@
+<div class="container" style="display: flex; flex-direction: column">
+    <h2>Relación datos a subir</h2>
+
+    <form>
+        <div *ngFor="let field of fields">
+            <label [for]="field.field_name">{{ field.verbose_name }}</label>
+            <select
+                [(ngModel)]="fieldMappings[field.field_name]"
+                [id]="field.field_name"
+                [name]="field.field_name" 
+            >
+                <option value="" disabled selected>
+                    Selecciona una cabecera
+                </option>
+                <option *ngFor="let header of sheet.data" [value]="header">
+                    {{ header }}
+                </option>
+            </select>
+        </div>
+    </form>
+
+    <div class="actions">
+        <button mat-button matStepperPrevious class="mat-elevation-z2">Atras</button>
+        <button
+            mat-button
+            matStepperNext
+            class="btn-primary"
+            [disabled]="
+            !isFormValid()
+            "
+            (click)="storageFile()"
+        >
+            Guardar
+        </button>
+    </div>
+</div>

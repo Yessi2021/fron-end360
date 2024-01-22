@@ -1,0 +1,76 @@
+
+<mat-toolbar class="toolbar flex-between">
+    <button
+        mat-icon-button
+        (click)="sidenav.toggle()"
+        class="show-on-mobile"
+    >
+        <mat-icon class="color-white">menu</mat-icon>
+    </button>
+    <img
+        src="../../assets/icon-bi360.png"
+        alt=""
+        class="img-icon"
+        height="64px"
+    />
+    <div class="btn-welcome">
+        <button mat-button class="btn-secondary" >
+            <span class="subtitles" [routerLink]="'/demo'" > {{ translate('request_demo') }} </span>
+        </button>
+        <button mat-button [routerLink]="'/login'" class="btn-primary">
+            <span class="subtitles"> {{ translate('login') }}  </span>
+        </button>
+    </div>
+    </mat-toolbar>
+
+<mat-sidenav-container fullscreen class="special-bg sidenav-container" #main>
+    <mat-sidenav
+        #sidenav
+        [mode]="isMobile ? 'over' : 'side'"
+        [opened]="!isMobile"
+    >
+        <mat-nav-list role="list" class="p-0">
+            <app-sidenav></app-sidenav>
+        </mat-nav-list>
+    </mat-sidenav>
+    
+    <mat-sidenav-content class="no-scroll-bar">
+        
+        <div class="container">
+            <section id="home" class="h-100 w-100">
+                <app-home></app-home>
+            </section>
+            <section id="weare" class="section">
+                <app-weare></app-weare>
+            </section>
+            <section id="customers" class="section customers">
+                <app-customers></app-customers>
+            </section>
+            <section id="uniques" class="section p-20">
+                <app-uniques></app-uniques>
+            </section>
+            <section id="team" class="section p-20">
+                <app-team></app-team>
+            </section>
+            <section id="comments" class="section p-20">
+                <app-comments></app-comments>
+            </section>
+            <section id="tdc" class="section p-20">
+                <app-tdc></app-tdc>
+            </section>
+            <section id="projects" class="section p-20">
+                <app-projects></app-projects>
+            </section>
+            <section id="maturity" class="section p-20" #maturity>
+                <app-maturity></app-maturity>
+            </section>
+            <section id="contact" class="section p-20">
+                <app-contact></app-contact>
+            </section>
+            <footer id="footer" class="section p-20 footer">
+                <app-footer></app-footer>
+            </footer>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

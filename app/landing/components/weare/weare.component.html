@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="header">
+        <span class="title text-center"> {{translate('ware_title1')}} </span>
+    </div>
+    <div class="more">
+        {{translate('ware_title2')}}
+    </div>
+
+    <div class="cards">
+        <div class="card" *ngFor="let card of cards">
+            <img
+                src="../../../../assets/{{ card.img }}"
+                alt=""
+                class="card-img"
+            />
+            <span class="card-title">{{ card.title }}</span>
+            <span class="card-content">{{ card.content }}</span>
+        </div>
+    </div>
+</div>

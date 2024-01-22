@@ -1,0 +1,113 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: var(--foundation-cards-cards-800, #0a0f26);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .body {
+        display: flex;
+        width: 474px;
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        border-radius: 15px;
+        background: var(--foundation-cards-cards-500, #121c45);
+
+        .img-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            align-self: stretch;
+            .title {
+                align-self: stretch;
+                color: var(--foundation-texts-texts-50, #fbfbfb);
+                text-align: center;
+                margin: 0;
+            }
+            .subtitle {
+                color: var(--foundation-violet-violet-50, #f7f3fc);
+                text-align: center;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            align-self: stretch;
+
+            .login-input {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                align-self: stretch;
+                label {
+                    color: #d7d7d7;
+                    font-feature-settings:
+                        'clig' off,
+                        'liga' off;
+
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 18px;
+                }
+
+                input {
+                    color: #d7d7d7;
+                    outline: none;
+                    font-feature-settings:
+                        'clig' off,
+                        'liga' off;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 18px;
+                    background-color: transparent;
+                    width: calc(100% - 40px);
+                    padding: 11px 11px 11px 24px;
+                    border-radius: 8px;
+                    border: 1px solid var(--foundation-cards-cards-100, #b6b9c5);
+                }
+            }
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            align-self: stretch;
+            button.btn-primary,
+            button.btn-secondary {
+                align-self: stretch;
+                height: 44px;
+            }
+
+            button.btn-primary:disabled {
+                background: var(--foundation-background-background-50, #e8e8ea);
+                /* drop-shadow/button-primary */
+                box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04);
+                span{
+                    color: var(--foundation-texts-texts-700, #999);
+                }
+            }
+        }
+    }
+}

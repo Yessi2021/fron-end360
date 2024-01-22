@@ -1,0 +1,128 @@
+<div class="container">
+    <div class="select_config">
+        <h2>Seleccione una de tus configuraciones guardadas o agrege una nueva: </h2>
+       <div class="config_one">
+        <mat-card>
+            <mat-card-content>
+                <section class="example-section">
+                    <mat-radio-group>
+                        <mat-radio-button >Configuracion 1</mat-radio-button>
+                    </mat-radio-group>
+                  </section>
+            </mat-card-content>
+        </mat-card>
+       </div>
+       <div class="config_two">
+        <mat-card>
+            <mat-card-content>
+                <section class="example-section">
+                    <mat-radio-group>
+                        <mat-radio-button class="example-margin" value="after">Configuracion 2</mat-radio-button>
+                    </mat-radio-group>
+                  </section>
+            </mat-card-content>
+        </mat-card>
+        <p>Necesitas una nueva configuracion ?</p>
+        <form >
+            <div class="select_container">
+                <!-- <h2>Seleccionar hoja y previsualizar columnas</h2> -->
+                <div class="select-sheet">
+            
+                       <div>
+                            <div class="label">
+                                <label for="sheetSelect">Nombre</label>
+                            </div>
+                       
+                        <input type="text"
+                         placeholder="Escribe aqui"
+                        class="input_nombre"
+                         >    
+                        
+                    </div>
+                    
+                    <div >
+                       <div class="label">
+                        <label for="sheetSource"
+                        >Información a actualizar</label
+                    >
+                       </div>
+                        <select
+                        class="update"
+                            id="sheetSource"
+                            [(ngModel)]="sheetSource"
+                            (change)="changeSource()"
+                        >
+                            <option *ngFor="let source of sources" [value]="source.code">
+                                {{ source.name }}
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+                            <div class="label">
+                                <label for="sheetSelect">Seleccionar hoja:</label>
+                            </div>
+                        <select
+                            id="sheetSelect"
+                            [(ngModel)]="selectedSheet"
+                            (change)="changeSheet()"
+                        >
+                            <option value="">
+                                Selecciona la hoja que contiene la información
+                            </option>
+                            <option
+                                *ngFor="let sheetName of getSheetNames()"
+                                [value]="sheetName"
+                            >
+                                {{ sheetName }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <span class="subtitle">Seleccione la fila con los encabezados</span>
+                <div class="column-preview">
+                    <div
+                        *ngFor="let row of getSelectedSheetRows(); let i = index"
+                        class="row"
+                    >
+                        <input
+                            class="square-20px"
+                            type="checkbox"
+                            [checked]="selectedInputIndex === i"
+                            [value]="i"
+                            (change)="onCheckboxChange(i)"
+                        />
+                        <span class="square-20px">&nbsp;</span>
+                        <div class="row-preview">
+                            <ng-container *ngFor="let cell of row; let j = index">
+                                <div *ngIf="j < 5" class="cell">{{ cell }}</div>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+               </div>
+        </form>
+        <div class="new_config">
+            <p class="add" >+</p> <p>Agrega configuacion</p>
+        </div>
+       </div>
+        
+    </div>
+
+  
+
+    <div class="actions">
+        <button mat-button matStepperPrevious class="mat-elevation-z2">Atras</button>
+        <button
+            mat-button
+            matStepperNext
+            class="btn-primary"
+            [disabled]="
+                !selectedSheet ||
+                selectedInputIndex === null ||
+                selectedInputIndex === undefined
+            "
+        >
+            Siguiente
+        </button>
+    </div>
+</div>

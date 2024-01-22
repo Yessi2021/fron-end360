@@ -1,0 +1,77 @@
+
+
+<mat-sidenav-container fullscreen>
+    <mat-sidenav
+        #sidenav
+        [mode]="isMobile ? 'over' : 'side'"
+        [opened]="!isMobile"
+    >
+        <div class="sidenav-content">
+            <span> {{translate("menu")}} </span>
+            <mat-nav-list role="list" class="nav-list">
+                <a class="item" routerLink="/intranet" > {{translate('resumen')}} </a>
+                <mat-accordion class="w-100">
+                    <mat-expansion-panel (opened)="(false)" class="mat-elevation-z0">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                               {{ translate('report') }}
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <a [routerLink]="['/intranet/reports', 'sales']" class="item"> {{translate('sales')}} </a>
+                        <a [routerLink]="['/intranet/reports', 'products']" class="item"> {{translate('products')}} </a>
+                        <a [routerLink]="['/intranet/reports', 'customers']" class="item"> {{translate('customers')}} </a>
+                    </mat-expansion-panel>
+                </mat-accordion>
+                <a class="item" routerLink="/intranet/upload" > {{ translate('load_data') }} </a>
+                <a class="item"> {{ translate('account')}} </a>
+                <a class="item"> {{ translate('user_m') }} </a>
+            </mat-nav-list>
+            <span class="flex-1"></span>
+            <button mat-button (click)="logout()">
+                <mat-icon>logout</mat-icon> {{translate('logout')}}
+              </button>
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="">
+        <mat-toolbar class="toolbar flex-between show-on-mobile">
+            <button
+                mat-icon-button
+                (click)="sidenav.toggle()"
+                class="show-on-mobile"
+            >
+                <mat-icon class="color-white">menu</mat-icon>
+            </button>
+            <img
+                src="../../assets/icon-bi360.png"
+                alt=""
+                class="img-icon"
+                height="64px"
+            />
+        </mat-toolbar>
+        <div class="container">
+            <div class="description_up">
+                <h3 class="m-0 t-center">Cargar archivo Excel</h3>
+                <p class="t-center">Seleccione el archivo de excel para cargar nueva  información</p>
+            </div> 
+            <div class="container_success">
+                <div class="step_one"> 
+                    <div class="step_title">
+                   <div class="base"> <p>1</p></div> <h3>Subir documento</h3> 
+                </div>
+            </div>
+                <div class="step_two"> 
+                    <div class="step_title">
+                      <div class="base"><p>2</p></div> <h3>Hoja y encabezado</h3>
+                    </div>
+                </div>
+                <div class="step_three">
+                    <div class="step_title">
+                        <div class="base"><p>3</p></div> <h3>Confirmar informaion</h3>
+                    </div>
+                </div>
+            </div>
+            <router-outlet></router-outlet> 
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

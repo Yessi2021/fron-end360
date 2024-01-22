@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="title"> {{translate('mark_title')}} </div>
+    <div class="carousel">
+        <div class="center-middle">
+            <img
+                src="../../../../assets/comments/iconArrowLeft.svg"
+                alt=""
+                class="left"
+                (click)="previous()"
+            />
+        </div>
+        <div class="cards">
+            <div class="card">
+                <img
+                    src="../../../../assets/comments/speech-bubble 2.svg"
+                    alt=""
+                    class="speech-icon"
+                />
+                <img
+                    src="../../../../assets/comments/starts group.svg"
+                    alt=""
+                    class="stars"
+                />
+                <div class="content">
+                    {{ comments[index].content }}
+                </div>
+                <hr />
+                <div class="business">
+                    <img
+                        src="../../../../assets/comments/{{
+                            comments[index].avatar
+                        }}"
+                        alt=""
+                        class="avatar"
+                    />
+                    <div class="person">
+                        <span class="name">{{ comments[index].name }}</span>
+                        <span class="rol">{{ comments[index].rol }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center-middle">
+            <img
+                src="../../../../assets/comments/iconArrowRight.svg"
+                alt=""
+                class="left"
+                (click)="next()"
+            />
+        </div>
+    </div>
+
+    <div class="carousel-large cards">
+        <div class="center-middle">
+            <img
+                src="../../../../assets/comments/iconArrowLeft.svg"
+                alt=""
+                class="left"
+            />
+        </div>
+        <div class="card" *ngFor="let com of comments">
+            <img
+                src="../../../../assets/comments/speech-bubble 2.svg"
+                alt=""
+                class="speech-icon"
+            />
+            <img
+                src="../../../../assets/comments/starts group.svg"
+                alt=""
+                class="stars"
+            />
+            <div class="content">
+                {{ com.content }}
+            </div>
+            <hr />
+            <div class="business">
+                <img
+                    src="../../../../assets/comments/{{ com.avatar }}"
+                    alt=""
+                    class="avatar"
+                />
+                <div class="person">
+                    <span class="name">{{ com.name }}</span>
+                    <span class="rol">{{ com.rol }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="center-middle">
+            <img
+                src="../../../../assets/comments/iconArrowRight.svg"
+                alt=""
+                class="left"
+            />
+        </div>
+    </div>
+</div>

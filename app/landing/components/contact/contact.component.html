@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="header">
+        <div>
+            <span class="title"> {{ translate('contact') }}  </span>
+            <span class="subtitle">
+               {{ translate('question') }}
+            </span>
+        </div>
+        <form class="content" [formGroup]="contact">
+            <div class="columns">
+                <div class="block-input">
+                    <div class="group-input">
+                        
+                        <label for="name"> {{translate('name')}} *</label>
+                        <input
+                            formControlName="name"
+                            type="text"
+                            id="name"
+                            placeholder="{{translate('placeholder')}}"
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="group-input">
+                        <label for="phone">{{translate('phone')}} *</label>
+                        <input
+                            formControlName="phone"
+                            type="number"
+                            id="phone"
+                            placeholder="{{translate('placeholder')}}"
+                            autocomplete="off"
+                        />
+                    </div>
+                </div>
+                <div class="block-input">
+                    <div class="group-input">
+                        <label for="email_contact"> {{translate('email')}} *</label>
+                        <input
+                            formControlName="email"
+                            type="email"
+                            id="email_contact"
+                            placeholder="{{translate('placeholder')}}"
+                        />
+                    </div>
+                    <div class="group-input">
+                        <label for="business_contact"> {{ translate('company') }} *</label>
+                        <input
+                            formControlName="business"
+                            type="text"
+                            id="business_contact"
+                            placeholder="{{translate('placeholder')}}"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <label for="message">{{translate('help')}} *</label>
+                <textarea
+                    formControlName="message"
+                    name=""
+                    id="message"
+                    cols="30"
+                    rows="6"
+                    placeholder="{{translate('placeholder')}}"
+                ></textarea>
+            </div>
+
+            <div class="terms">
+                <input type="checkbox" id="terms" />
+                <label for="terms"
+                    >{{translate('temrs')}}
+                    <span class="text-underline"
+                        ><strong>{{translate('temrs2')}}</strong></span
+                    >
+                </label>
+            </div>
+
+            <button
+                class="send border-none"
+                (click)="submitSurvey()"
+                [disabled]="contact.invalid"
+                [ngClass]="{'send-invalid': contact.invalid}"
+            >
+                <span class="btn-label"> {{translate('send_m')}} </span>
+            </button>
+        </form>
+    </div>
+</div>

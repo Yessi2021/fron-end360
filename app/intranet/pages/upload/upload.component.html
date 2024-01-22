@@ -1,0 +1,34 @@
+<mat-stepper orientation="horizontal" [linear]="true" class="h-100">
+    <mat-step>
+        <ng-template matStepLabel>Subir Excel</ng-template>
+        <ng-template matStepContent>
+            <app-upload-excel (sheetDataLoaded)="sheetData = $event"></app-upload-excel>
+        </ng-template>
+        <!-- <app-check-columns
+        [sheetData]="sheetData"
+        (selectedSheetEvent)="sheet = $event"
+        (selectedSourceEvent)="dataSourceSheet = $event"
+    ></app-check-columns> -->
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Hoja y encabezados</ng-template>
+        <ng-template matStepContent>
+            <app-check-columns
+                [sheetData]="sheetData"
+                (selectedSheetEvent)="sheet = $event"
+                (selectedSourceEvent)="dataSourceSheet = $event"
+            ></app-check-columns>
+
+        </ng-template>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Relacionamiento</ng-template>
+        <app-link-columns
+            [sheet]="sheet"
+            [expected]="dataSourceSheet"
+            [path]="sheetData?.path"
+        ></app-link-columns>
+        
+    </mat-step>
+</mat-stepper>
+

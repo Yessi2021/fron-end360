@@ -1,0 +1,207 @@
+<div mat-dialog-content class="content">
+    <div class="headers-content">
+        <span class="subtitles"
+            > {{translate('test_title1')}} </span
+        >
+        <button mat-icon-button mat-dialog-close aria-label="Cerrar">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <small class="text-justify"
+        >
+        {{translate('test_title2')}}
+        </small
+    >
+
+    <form class="container" [formGroup]="customer">
+        <!-- Pregunta 1 -->
+        <div class="w-100-10">
+            <label for="name"> {{translate('test_title3')}}</label>
+            <input
+                type="text"
+                formControlName="name"
+                name="name"
+                id="name"
+                class="w-100"
+            />
+        </div>
+        <div class="w-100-10">
+            <label for="business"> {{translate('test_title4')}}</label>
+            <input
+                type="text"
+                formControlName="business"
+                name="business"
+                id="business"
+                class="w-100"
+            />
+        </div>
+        <div class="w-100-10">
+            <label for="email"> {{translate('test_title5')}}</label>
+            <input
+                type="email"
+                formControlName="email"
+                name="email"
+                id="email"
+                class="w-100"
+            />
+        </div>
+    </form>
+
+    <form class="container" [formGroup]="questions">
+        <!-- Pregunta 1 -->
+        <div>
+            <label for="tools"
+                > {{translate('test_title6')}}</label
+            >
+            <select
+                formControlName="tools"
+                name="tools"
+                id="tools"
+                class="w-100"
+            >
+                <option value="1">
+                    {{translate('test_title7')}}
+                </option>
+                <option value="2">
+                    {{translate('test_title8')}}
+                </option>
+                <option value="3">
+                    {{translate('test_title9')}}
+                </option>
+                <option value="4">
+                    {{translate('test_title10')}}
+                </option>
+                <option value="5">
+                    {{translate('test_title11')}}
+                </option>
+            </select>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div>
+            <label for="standars"
+                >    {{translate('test_title12')}}</label
+            >
+            <select
+                formControlName="standars"
+                name="standars"
+                id="standars"
+                class="w-100"
+            >
+                <option value="1"> {{translate('test_question1')}}</option>
+                <option value="2">
+                    {{translate('test_question2')}}
+                </option>
+                <option value="3">
+                    {{translate('test_question3')}}
+                </option>
+                <option value="4">
+                    {{translate('test_question4')}}
+                </option>
+                <option value="5">
+                    {{translate('test_question5')}}
+                </option>
+            </select>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div>
+            <label for="avaliability"
+                >  {{translate('test_question6')}}</label
+            >
+            <select
+                formControlName="avaliability"
+                name="avaliability"
+                id="avaliability"
+                class="w-100"
+            >
+                <option value="1">
+                    {{translate('test_question7')}}
+                </option>
+                <option value="2">
+                    {{translate('test_question8')}}
+                </option>
+                <option value="3">
+                    {{translate('test_question9')}}
+                </option>
+                <option value="4">
+                    {{translate('test_question10')}}
+                </option>
+                <option value="5">
+                    {{translate('test_question11')}}
+                </option>
+            </select>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div>
+            <label for="level"
+                >  {{translate('test_question12')}}</label
+            >
+            <select
+                id="level"
+                name="level"
+                formControlName="level"
+                class="w-100"
+            >
+                <option value="1">  {{translate('test_question13')}} </option>
+                <option value="2">  {{translate('test_question14')}} </option>
+
+                <option value="3">
+                    {{translate('test_question15')}}
+                </option>
+
+                <option option value="4">
+                    {{translate('test_question16')}}
+                </option>
+
+                <option value="5">
+                    {{translate('test_question17')}}
+                </option>
+            </select>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div>
+            <label for="management"
+                >  {{translate('test_question18')}}</label
+            >
+            <select
+                id="management"
+                name="management"
+                formControlName="management"
+                class="w-100"
+            >
+                <option value="1">
+                    {{translate('test_question19')}}
+                </option>
+                <option value="2">
+                    {{translate('test_question20')}}
+                </option>
+                <option value="3">
+                    {{translate('test_question21')}}
+                </option>
+                <option value="4">
+                    {{translate('test_question22')}}
+                </option>
+                <option value="5">
+                    {{translate('test_question23')}}
+                </option>
+            </select>
+        </div>
+    </form>
+
+    <mat-dialog-actions>
+        <div class="action-btns">
+            <button
+                (click)="submitSurvey()"
+                mat-raised-button
+                color="primary"
+                class="max-w-250px"
+                [disabled]="questions.invalid || customer.invalid"
+            >
+               {{ translate('test_calcular') }}
+            </button>
+        </div>
+    </mat-dialog-actions>
+</div>

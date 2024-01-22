@@ -1,0 +1,639 @@
+<section>
+    <mat-stepper class="container_stepper" orientation="horizontal">
+        <mat-step>
+            <div class="datos">
+                <ng-template matStepLabel>
+                    <h3 class="info">Datos de contacto</h3>
+                </ng-template>
+            </div>
+            <ng-template matStepContent>
+                <div class="content d-flex">
+                    <div class="img-container">
+                        <img
+                            class="logo"
+                            src="../../assets/icon-bi360.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <div class="header">
+                        <h2 class="title">¡Bienvenido!</h2>
+                        <span class="subtitle description-2">
+                            Si es tu primera vez aquí, activa tu cuenta y luego
+                            inicia sesión.</span
+                        >
+                    </div>
+                    <div class="container-form">
+                        <form [formGroup]="form">
+                            <div class="form-group">
+                                <div class="login-input">
+                                    <label class="full-size">Nombre</label>
+                                    <div class="input_style">
+                                        <input
+                                            matInput
+                                            class="pass-input"
+                                            formControlName="nombre"
+                                            placeholder="Escribe aquí"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="login-input">
+                                    <label class="full-size">Email</label>
+                                    <input
+                                        class="w-100 form-input"
+                                        matInput
+                                        type="email"
+                                        formControlName="email"
+                                        placeholder="Escribe aquí"
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="login-input">
+                                    <label class="full-size"
+                                        >Nombre empresa</label
+                                    >
+                                    <input
+                                        class="w-100 form-input"
+                                        matInput
+                                        type="text"
+                                        formControlName="nEmpresa"
+                                        placeholder="Nombre empresa"
+                                    />
+                                </div>
+                                <div class="login-input">
+                                    <label class="full-size">Nit Empresa</label>
+                                    <input
+                                        class="w-100 form-input"
+                                        matInput
+                                        type="text"
+                                        formControlName="nitEmpresa"
+                                        placeholder="Nit empresa"
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="login-input">
+                                    <label class="full-size"
+                                        >Direccion empresa</label
+                                    >
+                                    <input
+                                        class="w-100 form-input"
+                                        matInput
+                                        type="text"
+                                        formControlName="nEmpresa"
+                                        placeholder="Direccion empresa"
+                                    />
+                                </div>
+                                <div class="login-input">
+                                    <label class="full-size"
+                                        >Telefono empresa</label
+                                    >
+                                    <input
+                                        class="w-100 form-input"
+                                        matInput
+                                        type="number"
+                                        formControlName="telefonoEmpresa"
+                                        placeholder="Telefono empresa"
+                                    />
+                                </div>
+                            </div>
+                        </form>
+                        <div class="back-home">
+                            <a class="description-2" routerLink="/"
+                                >Regresar a la página principal</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <button [disabled]="!form.valid" mat-button matStepperNext>
+                    Siguiente
+                </button>
+            </ng-template>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>
+                <h3 class="info">Informacion especifica</h3>
+            </ng-template>
+            <ng-template matStepContent>
+                <!-- autorizacion -->
+                <section>
+                    <div class="autorization-container">
+                        <h2 class="t2">ACUERDO DE CONFIDENCIALIDAD</h2>
+
+                        <p>Entre los suscritos a saber:</p>
+
+                        <p>
+                            <strong
+                                >1. EMPRESA REGISTRADA NIT 000000000-0,</strong
+                            >
+                            quien para efectos del presente Acuerdo se
+                            denominará “ <strong>LA PARTE REVELADORA</strong> ”;
+                            y
+                        </p>
+
+                        <p>
+                            <strong>2. BI360 S.A.S.,</strong> identificada con
+                            el NIT 901.091.479-1, quien para efectos del
+                            presente Acuerdo se denominará “
+                            <strong>LA PARTE RECEPTORA</strong> ”.
+                        </p>
+
+                        <p>
+                            A quienes conjuntamente y para todos los efectos del
+                            presente Acuerdo se denominarán LAS PARTES o la
+                            PARTE, según corresponda, se ha celebrado el
+                            presente Acuerdo de Confidencialidad, que se regirá
+                            por las cláusulas que se expresan a continuación y
+                            en lo no previsto, por la Decisión 486 de la CAN, el
+                            Decreto 2591 de 2000, la Ley 256 de 1996, previas
+                            las siguientes:
+                        </p>
+
+                        <h3 class="t3">CONSIDERACIONES</h3>
+                        <p>
+                            <strong>1. LA PARTE REVELADORA</strong> es un
+                            empresa interesada en acceder a los servicios de
+                            analítica avanzada bajo esta plataforma.
+                            Actualmente,
+                            <strong> LA PARTE REVELADORA</strong> se encuentra
+                            en la necesidad de implementar una infraestructura
+                            de datos que permita obtener un catálogo de
+                            información organizado para el efecto de desarrollar
+                            nuevas estrategias de mercado y maximizar las
+                            estrategias ya establecidas.
+                        </p>
+
+                        <p>
+                            <strong>2. </strong>Que
+                            <strong> LA PARTE RECEPTORA</strong> es una compañía
+                            dedicada profesionalmente a proveer a otras empresas
+                            asesorías y acompañamientos en servicios
+                            profesionales especializados, tales como, servicios
+                            de manejo y análisis de datos e información.
+                            Centralización de información, con todas sus
+                            actividades conexas.
+                        </p>
+
+                        <p>
+                            <strong>3. </strong>Que
+                            <strong> LAS PARTES </strong> están en el proceso de
+                            firmar un contrato para que
+                            <strong>LA PARTE RECEPTORA</strong> le preste los
+                            servicios a
+                            <strong>LA PARTE REVELADORA</strong> sobre el manejo
+                            y análisis de datos e información, así como
+                            centralizar esta misma. En desarrollo de lo anterior
+                            y del ulterior contrato que se firmará,<strong>
+                                LA PARTE REVELADORA</strong
+                            >
+                            ha venido comunicando, y lo continuará haciendo, a
+                            <strong>LA PARTE RECEPTORA</strong>, información de
+                            diversa naturaleza considerada clave para el
+                            desarrollo de sus negocios.
+                        </p>
+                        <p>
+                            <strong>4. </strong> A raíz de la importancia que
+                            para <strong>LA PARTE REVELADORA</strong> tiene la
+                            información que está compartiendo,
+                            <strong>LAS PARTES</strong> consideran indispensable
+                            pactar un acuerdo que permita preservar el carácter
+                            confidencial y reservado de dicha información.
+                        </p>
+
+                        <p>
+                            <strong>5.</strong> Que, la información que LA PARTE
+                            REVELADORA compartirá es de su total propiedad y que
+                            así mismo i) ha sido obtenida legítimamente; ii)
+                            tiene valor personal y comercial y/o; iii) está
+                            sujeta a reserva legal.
+                        </p>
+
+                        <h3 class="t3">CLÁUSULAS</h3>
+                        <p>
+                            <strong><u>PRIMERA. – DEFINICIONES:</u> </strong>
+                            Para los efectos del presente Acuerdo, los
+                            siguientes términos tienen el significado que para
+                            cada uno de ellos se establece. A menos que un
+                            contexto determinado implique un alcance diferente,
+                            los términos en cuestión aplicarán tanto para el
+                            plural como para el singular. La definición
+                            establecida para cada término aplicará a menos que
+                            la legislación aplicable con carácter imperativo lo
+                            defina de manera diferente.
+                        </p>
+                        <h3 class="t3">INFORMACIÓN CONFIDENCIAL</h3>
+                        <p>
+                            Significa cualquier información personal, sensible,
+                            financiera, técnica, comercial, de negocios, de
+                            mercado, de productos, estratégica y relacionada con
+                            las operaciones de negocios presentes y futuros, o
+                            condiciones financieras de
+                            <strong>LA PARTE REVELADORA</strong> , así como
+                            cualquiera otra información que en el curso normal
+                            de los negocios sería considerada como confidencial,
+                            bien sea que dicha información sea escrita, oral,
+                            visual o en medio magnético, o en cualquier otra
+                            forma y en cualquier otro medio y ya sea marcada o
+                            identificada como confidencial o no, suministrada o
+                            divulgada, ya sea antes o después de la fecha de
+                            este Acuerdo, por, o a nombre de
+                            <strong>LA PARTE REVELADORA</strong> , la cual haya
+                            sido entregada a LA PARTE RECEPTORA.
+                        </p>
+
+                        <h3 class="t3">INFORMACIÓN DERIVADA</h3>
+                        <p>
+                            La información derivada y/o relativa a empleados,
+                            accionistas, clientes, referidos, compañías
+                            vinculadas, políticas corporativas, estrategias de
+                            ventas, contratos con terceros, planes de negocio,
+                            asuntos técnicos, comerciales y financieros, bases
+                            de datos, software, hardware, estudios, análisis,
+                            aplicaciones, marcas, enseñas, nombres comerciales,
+                            modelos y dibujos industriales, patentes, Know How,
+                            invenciones, descubrimientos y secretos
+                            profesionales, empresariales e industriales de
+                            <strong>LA PARTE REVELADORA</strong> , serán
+                            considerados reservados y confidenciales, así en el
+                            momento de su entrega no esté rotulada o
+                            identificada como tal.
+                        </p>
+                        <p>
+                            Se exceptúan de lo anterior los siguientes eventos:
+                        </p>
+
+                        <p>
+                            (i) Que la información haya sido de dominio público.
+                        </p>
+                        <p>
+                            (ii) Que la Información Confidencial, antes de ser
+                            revelada, estuviera en posesión legítima de la otra
+                            PARTE.
+                        </p>
+
+                        <p>
+                            (iii) Que con posterioridad a la revelación de la
+                            Información Confidencial de que se trate, ésta sea
+                            legalmente recibida por la otra PARTE de manos de un
+                            tercero que tenga derecho a distribuirla, sin
+                            notificación de restricción alguna en lo referente
+                            al derecho a revelarla posteriormente.
+                        </p>
+                        <p>
+                            (iv) Que la Información Confidencial sea adquirida
+                            por la otra PARTE a través de personas que no hayan
+                            tenido, bien directamente o indirectamente, acceso o
+                            conocimiento a la Información Confidencial.
+                        </p>
+
+                        <p>
+                            (v) Que la Información Confidencial se revele con la
+                            aprobación previa y escrita de la otra PARTE.
+                        </p>
+                        <p class="p_margin" >
+                            (vi) Que la revelación y/o divulgación de la
+                            información se realice en desarrollo o por mandato
+                            de una ley, decreto o sentencia u orden de autoridad
+                            competente en ejercicio de sus funciones legales. En
+                            este caso, la PARTE obligada a divulgar la
+                            información confidencial se obliga, antes de
+                            divulgar la información, a avisar inmediatamente
+                            haya tenido conocimiento de esta obligación a la
+                            otra PARTE, para que pueda tomar las medidas
+                            necesarias para proteger su información
+                            confidencial, y de igual manera se compromete a
+                            tomar las medidas necesarias para atenuar los
+                            efectos de tal divulgación
+                        </p>
+                        <p class="p_margin">
+                            <strong> <u>SEGUNDA. – OBJETO:</u> </strong> El
+                            presente Acuerdo tiene por objeto proteger y
+                            mantener la Información Confidencialidad que
+                            comparta e intercambie LA PARTE REVELADORA con LA
+                            PARTE RECEPTORA, o que LAS PARTES piensen llegar a
+                            intercambiarse mutuamente.
+                        </p>
+                       
+                        <p class="p_margin" >
+                            <strong>PARÁGRAFO: LA PARTE REVELADORA</strong>
+                            entregará a <strong>LA PARTE RECEPTORA</strong> , la
+                            información que técnicamente sea exigida por las
+                            autoridades competentes para adelantar los trámites
+                            de importación de los productos así como el
+                            cumplimiento con las normas legales asociadas a este
+                            proceso. Es entendido y aceptado por
+                            <strong>LA PARTE RECEPTORA</strong> que el hecho de
+                            suscribir el presente Acuerdo no le da derecho, en
+                            ningún momento, a exigir a
+                            <strong>LA PARTE REVELADORA</strong> i) el
+                            suministro de otra información o información
+                            adicional y ii) la contratación de servicios y/o
+                            seguros
+                        </p>
+                    
+
+                        <p class="p_margin" >
+                            <strong>TERCERA. – CONFIDENCIALIDAD:</strong>
+                            <strong>LA PARTE RECEPTORA</strong> asume la
+                            obligación de no revelar, divulgar, publicar,
+                            reproducir, modificar o usar indebidamente para sí o
+                            para terceros, la Información Confidencial recibida.
+                            En consecuencia, no la revelará, publicará o dará a
+                            conocer, ni total ni parcialmente, a ninguna persona
+                            diferente de sus empleados o dependientes, que
+                            estrictamente necesiten conocerla para poder asistir
+                            en el desarrollo empresarial pretendido por
+                            <strong>LA PARTE REVELADORA</strong> , no sin antes
+                            asegurarse de tener pactado con ellos cláusulas de
+                            confidencialidad que les obligue a mantener reserva
+                            de la Información Confidencial que les sea
+                            suministrada.
+                        </p>
+                        <p class="p_margin">
+                            <strong>PARÁGRAFO:</strong> Para efectos de la
+                            presente Cláusula, se considera como indebido,
+                            cualquier uso que se le dé a la Información
+                            Confidencial distinto del indicado en el presente
+                            Acuerdo. El uso indebido o la revelación de
+                            Información Confidencial serán considerados como
+                            competencia desleal, quedando sujeto a las sanciones
+                            legales respectivas, además de la responsabilidad,
+                            hasta por lucro cesante, por los daños ocasionados a
+                            la PARTE propietaria de la Información Confidencial.
+                        </p>
+                       
+                        <p class="p_margin" >
+                            <strong>
+                                <u>CUARTA. – PROPIEDAD DE LA INFORMACIÓN:</u>
+                            </strong>
+                            LA PARTE RECEPTORA por este acto acusa recibo y
+                            acuerda que toda información confidencial de la
+                            <strong>PARTE REVELADORA</strong> es propiedad
+                            exclusiva de ésta, y que se revela únicamente con el
+                            propósito de facilitarle el desarrollo de los temas
+                            de que trata este Acuerdo y del Contrato de
+                            Prestación de Servicios que se firmará. En tal
+                            sentido, <strong>LA PARTE RECEPTORA</strong> no
+                            adquirirá derechos de propiedad o disposición
+                            respecto de la información suministrada por la otra
+                            PARTE.
+                        </p>
+                      
+
+                        <p class="p_margin">
+                            <strong>
+                                <u>QUINTA. – REVELACIÓN OBLIGADA:</u>
+                            </strong>
+                            En el evento de presentarse una decisión judicial en
+                            firme, orden administrativa, requerimiento o
+                            solicitud oficial expedida bien sea por un tribunal
+                            competente o una autoridad u órgano judicial,
+                            administrativo o legislativo que implique la
+                            revelación parcial o total de la Información
+                            Confidencial poseída o conocida por LAS PARTES, la
+                            PARTE requerida notificará a la otra PARTE de
+                            inmediato antes de revelar la Información
+                            Confidencial, de tal manera que ésta tenga la
+                            oportunidad de defenderla, limitarla o protegerla,
+                            quedando en todo caso la PARTE requerida obligada a
+                            alegar oportuna y debidamente el secreto profesional
+                            o mercantil para prevenir su divulgación.
+                        </p>
+                      
+                        <p>
+                            <strong>
+                                <u>SEXTA. – USO Y MANEJO DE LA INFORMACIÓN:</u>
+                            </strong>
+                            LA PARTE RECEPTORA se obliga a utilizar la
+                            Información Confidencial única y exclusivamente para
+                            los fines específicos de la relación comercial que
+                            tienen. Concretamente, LA PARTE RECEPTORA utilizará
+                            la Información Confidencial para los efectos
+                            establecidos en la Consideración tercera del
+                            presente Acuerdo.
+                        </p>
+                        <p class="p_margin">
+                            <strong>
+                                <u
+                                    >SÉPTIMA. – DEVOLUCIÓN DE INFORMACIÓN
+                                    CONFIDENCIAL:</u
+                                >
+                            </strong>
+                            LA PARTE RECEPTORA no podrá usar la Información
+                            Confidencial luego de culminada la vigencia del
+                            presente Acuerdo y deberá devolver toda la
+                            Información Confidencial dentro de los tres (3) días
+                            hábiles siguientes a aquel en que el presente
+                            Acuerdo termine por cualquier causa. Para su
+                            devolución, La Información Confidencial será enviada
+                            a la dirección establecida en el presente Acuerdo.
+                        </p>
+                
+                        <p class="p_margin">
+                            <strong>
+                                <u>OCTAVA. – MEDIOS DE CONSERVACIÓN:</u>
+                            </strong>
+                            Para salvaguardar la Información Confidencial
+                            suministrada o conocida, LA PARTE RECEPTORA deberá
+                            adoptar medios de conservación y las medidas de
+                            seguridad que garanticen la confidencialidad y no
+                            divulgación de la información revelada y/o conocida,
+                            teniendo presente que no debe ser menor al nivel de
+                            cuidado que sea razonablemente necesario para evitar
+                            su pérdida, robo o sustracción, o utilización no
+                            autorizada. En caso de sospecha fundada de alguna de
+                            LAS PARTES, de que la Información Confidencial ha
+                            sido mal utilizada, saqueada o conocida por terceros
+                            no autorizados, ésta deberá notificar inmediatamente
+                            a la otra PARTE y asistirla en la recuperación de la
+                            misma.
+                        </p>
+                      
+                        <p class="p_margin">
+                            <strong>
+                                <u>NOVENA. – PROPIEDAD INTELECTUAL:</u>
+                            </strong>
+                            La entrega de la Información Confidencial a LA PARTE
+                            RECEPTORA no concede, ni expresa ni implícitamente,
+                            autorización, permiso o licencia de uso de marcas
+                            comerciales, patentes, derechos de autor o de
+                            cualquier otro derecho de propiedad industrial o
+                            intelectual. Ni este Acuerdo, ni la entrega o
+                            recepción de información, sea confidencial o no,
+                            constituirá o implicará promesa de efectuar contrato
+                            alguno para el licenciamiento de uso y/o explotación
+                            de los derechos inherentes a la Propiedad
+                            Intelectual.
+                        </p>
+                     
+                        <p class="p_margin">
+                            <strong>
+                                <u>DÉCIMA. – VIGENCIA DEL ACUERDO:</u>
+                            </strong>
+                            LAS PARTES acuerdan que el presente Acuerdo tendrá
+                            una duración equivalente al tiempo que duren sus
+                            actividades comerciales, y dos años más desde el
+                            momento en que estas terminen.
+                        </p>
+                      
+
+                        <p class="p_margin">
+                            <strong>
+                                <u>DÉCIMA PRIMERA. – SOLUCIÓN DE CONFLICTOS:</u>
+                            </strong>
+                            Toda diferencia que surja entre LAS PARTES en
+                            relación a la interpretación, ejecución,
+                            cumplimiento y/o terminación del presente Acuerdo,
+                            no pudiendo arreglarse amigablemente dentro de los
+                            treinta (30) días siguientes a la fecha en que una
+                            de ellas lo proponga a la otra, será sometida a la
+                            decisión de un Tribunal de Arbitramento que
+                            funcionará en la ciudad de Medellín, estará
+                            integrado por un (1) árbitro abogado en ejercicio en
+                            Colombia, decidirá en derecho y funcionará según las
+                            reglas del Centro de Conciliación y Arbitraje de la
+                            Cámara de Comercio de Medellín. El árbitro se
+                            designará por LAS PARTES de común acuerdo y a falta
+                            de éste, por la Cámara de Comercio de Medellín.
+                        </p>
+                      
+                        <p class="p_margin">
+                            <strong>
+                                <u>DÉCIMA SEGUNDA. – LEGISLACIÓN APLICABLE:</u>
+                            </strong>
+                            El manejo de la Información Confidencial, estará
+                            sujeto a la Decisión 486 de la CAN, el Decreto 2591
+                            de 2000, la Ley 256 de 1996, y las demás
+                            disposiciones pertinentes del ordenamiento legal
+                            colombiano. Así mismo, LAS PARTES se obligan a
+                            respetar los usos y costumbres comerciales y la
+                            buena fe. El domicilio contractual será la ciudad de
+                            Medellín.
+                        </p>
+                       
+                        <p class="p_margin">
+                            <strong>
+                                <u
+                                    >DÉCIMA TERCERA. – ACUERDO NO CONFIERE
+                                    DERECHOS:</u
+                                >
+                            </strong>
+                            El presente Acuerdo no genera ningún tipo de
+                            obligación a LA PARTE REVELADORA en torno a divulgar
+                            información de su propiedad a la otra PARTE. Nada en
+                            este Acuerdo puede ser interpretado como concesión
+                            de derecho alguno mediante licencias o de otro modo,
+                            en forma expresa o tácita, sobre patentes, marcas
+                            registradas, derechos de autor, secretos
+                            profesionales, empresariales o industriales, o sobre
+                            cualquier otra información de propiedad de la otra
+                            PARTE que sea puesta en conocimiento de
+                            <strong>LA PARTE RECEPTORA.</strong>
+                        </p>
+                      
+                        <p class="p_margin">
+                            <strong>
+                                <u>DÉCIMA CUARTA. – INTEGRIDAD:</u>
+                            </strong>
+                            Este instrumento contiene el acuerdo completo entre
+                            LAS PARTES, lo cual deja sin efecto cualquier
+                            entendimiento anterior, oral o escrito, con respecto
+                            al asunto que regula. Cualquier modificación del
+                            presente Acuerdo, será válida solo cuando se haga
+                            por escrito y sea debidamente firmada por LAS
+                            PARTES.
+                        </p>
+                       
+                        <p class="p_margin">
+                            <strong>
+                                <u>DÉCIMA QUINTA. – MÉRITO EJECUTIVO:</u>
+                            </strong>
+                            LAS PARTES reconocen que el presente Acuerdo presta
+                            mérito ejecutivo para el cumplimiento de las
+                            obligaciones de dar y hace en él contenidas.
+                        </p>
+                       
+                        <p class="p_margin">
+                            <strong> <u>DÉCIMA SEXTA. – CESIÓN:</u> </strong> El
+                            Acuerdo no puede ser cedido, ni parcial ni
+                            totalmente, por ninguna de LAS PARTES, sin la previa
+                            autorización, expresada por escrito por la otra
+                            PARTE. No obstante, LAS PARTES podrán ceder el
+                            presente Acuerdo, cuando la cesión sea la
+                            consecuencia de una reestructuración corporativa,
+                            fusión, escisión, venta general de activos,
+                            etcétera, para lo cual solo deberá dar aviso a la
+                            otra PARTE con quince (15) días de anticipación
+                        </p>
+                      
+                        <p class="p_margin">
+                            <strong>
+                                <u>DÉCIMA SÉPTIMA. – DIVISIBILIDAD:</u>
+                            </strong>
+                            Si cualquier disposición del Acuerdo fuese ineficaz,
+                            declarada nula o inexistente o no se pudiese hacer
+                            exigible de conformidad con las leyes de la
+                            República de Colombia, las disposiciones restantes
+                            del Acuerdo no se entenderán invalidadas a menos que
+                            el acuerdo no se pueda ejecutar sin la disposición
+                            ineficaz, nula, inexistente o inexigible.
+                        </p>
+                      
+                        <p class="p_margin" >
+                            <strong>
+                                <u>DÉCIMA OCTAVA. – NOTIFICACIONES:</u>
+                            </strong>
+
+                            <a class="p_none"  href="#">
+                                Para todos los efectos legales, LAS PARTES recibirán
+                            sus notificaciones de acuerdo con la información
+                            proporcionada.
+                            </a>
+
+                            Cualquier comunicación referida al presente Acuerdo,
+                            deberá hacerse por escrito y deberá ser dirigida a
+                            las direcciones antes anotadas. LAS PARTES deberán
+                            informar, por escrito y con la debida anticipación
+                            cualquier cambio en la dirección provista. En caso
+                            de que las comunicaciones se hagan por correo
+                            electrónico, las mismas se considerarán recibidas
+                            luego de ser confirmadas por su destinatario
+                        </p>
+                        <p class="p_margin" >
+                            Una vez leído el presente Acuerdo, LAS PARTES
+                            expresamente asienten a lo estipulado y firman
+                        </p>
+                      
+                      
+
+                        <div class="form__privacy">
+                            <input
+                                id="checkbox"
+                                (click)="changeStatusChecbox()"
+                                [(ngModel)]="isChecked"
+                                name="checkbox"
+                                type="checkbox"
+                                required
+                            />
+                            <label for="checkbox">Estoy de acuerdo</label>
+                        </div>
+                    </div>
+                </section>
+           
+                <button mat-button matStepperPrevious>Atras</button>
+                <button
+                    [ngClass]="{
+                        btn_send1: condicionBtn,
+                        btn_send2: !condicionBtn
+                    }"
+                    (click)="validAuthorization()"
+                    mat-button
+                    matStepperNext
+                >
+                    Siguiente
+                </button>
+            </ng-template>
+        </mat-step>
+    </mat-stepper>
+</section>

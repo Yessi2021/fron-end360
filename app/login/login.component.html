@@ -1,0 +1,82 @@
+<section>
+    <div class="content d-flex">
+        <div class="img-container">
+            <img class="logo" src="../../assets/icon-bi360.png" alt="" />
+        </div>
+        <div class="header">
+            <h2 class="title">{{ translate('welcome') }}</h2>
+            <span class="subtitle description-2"> {{ translate('title_login') }} </span
+            >
+        </div>
+        <div class="container-form">
+            <form [formGroup]="form">
+                <div class="login-input">
+                    <label class="full-size"> {{ translate('email') }} </label>
+                    <input
+                        class="w-100 form-input"
+                        matInput
+                        type="email"
+                        formControlName="email"
+                        placeholder="Escribe aquí"
+                    />
+                </div>
+                <div class="login-input">
+                    <label class="full-size"> {{ translate('password') }} </label>
+                    <div class="password">
+                        <input
+                            matInput
+                            class="pass-input"
+                            [type]="hidePassword ? 'password' : 'text'"
+                            formControlName="password"
+                            placeholder="{{ translate('placeholder') }}"
+                        />
+                        <button
+                            mat-icon-button
+                            matSuffix
+                            (click)="togglePasswordVisibility()"
+                            [attr.aria-label]="
+                                hidePassword
+                                    ? 'Mostrar contraseña'
+                                    : 'Ocultar contraseña'
+                            "
+                        >
+                            <mat-icon
+                                class="color-d7 view-pass"
+                                *ngIf="hidePassword"
+                                >visibility</mat-icon
+                            >
+                            <mat-icon
+                                class="color-d7 view-pass"
+                                *ngIf="!hidePassword"
+                                >visibility_off</mat-icon
+                            >
+                        </button>
+                    </div>
+                    <div class="forgot-password">
+                        <a class="description-2" routerLink="/recovery"> {{translate('forgot')}} </a>
+                    </div>
+                </div>
+            </form>
+            <div class="actions">
+                <button
+                    mat-button
+                    class="btn-primary subtitles"
+                    (click)="login()"
+                >
+                    <span> {{ translate('sesion_yes') }} </span>
+                </button>
+                <button
+                    mat-button
+                    class="btn-secondary subtitles"
+                    (click)="activeAccount()"
+                >
+                    <span> {{ translate('activate_acount') }} </span>
+                </button>
+            </div>
+
+            <div class="back-home">
+                <a class="description-2" routerLink="/"> {{translate('return_page')}} </a>
+            </div>
+        </div>
+    </div>
+</section>

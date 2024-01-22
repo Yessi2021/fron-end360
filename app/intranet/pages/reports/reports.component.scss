@@ -1,0 +1,23 @@
+#fullscreen-iframe {
+    position: fixed;
+    top: 0;
+    left: 270px;
+    width: calc(100% - 270px);
+    height: 100%;
+    border: none; /* Para eliminar el borde del iframe */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Asegúrate de que el contenedor de tu aplicación también ocupe la altura total disponible */
+.app-container { /* Este es un ejemplo. Reemplaza con el selector real de tu contenedor de aplicación. */
+    height: 100%;
+}
+
+.report-container {
+    height: 100%;
+}

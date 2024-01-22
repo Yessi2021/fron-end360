@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.center-title {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding-top: 20px;
+    margin: 0;
+}

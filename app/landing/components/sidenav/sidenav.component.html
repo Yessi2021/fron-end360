@@ -1,0 +1,27 @@
+<div class="sidenav" #sidenav>
+    <a class="item" [class.active]="location === 'weare'" href="#weare"
+        > {{translate('sidebar_link1')}} </a
+    >
+    <a class="item" [class.active]="location === 'customers'" href="#customers"
+        > {{translate('customers')}} </a
+    >
+    <a class="item" [class.active]="location === 'uniques'" href="#uniques"
+        > {{translate('sidebar_link2')}} </a
+    >
+    <a class="item" [class.active]="location === 'team'" href="#team">{{translate('team')}} </a>
+    <a class="item" [class.active]="location === 'comments'" href="#comments"
+        > {{translate('footer_a2_links')}} </a
+    >
+    <a class="item" [class.active]="location === 'tdc'" href="#tdc"
+        >Tech Driven Company</a
+    >
+    <a class="item" [class.active]="location === 'projects'" href="#projects"
+        > {{translate('projects')}} </a
+    >
+    <a class="item" [class.active]="location === 'maturity'" href="#maturity"
+        > {{translate('maturity')}} </a
+    >
+    <a class="item" [class.active]="location === 'contact'" href="#contact"
+        > {{translate('contact')}} </a
+    >
+</div>

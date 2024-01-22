@@ -1,0 +1,151 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+// Palette
+$background-palette: (
+    50: #e8e8ea,
+    100: #b6b8bf,
+    200: #9396a0,
+    300: #626675,
+    400: #43485a,
+    500: #141a31,
+    600: #12182d,
+    700: #0e1223,
+    800: #0b0e1b,
+    900: #080b15,
+    contrast: (
+        50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
+        300: white,
+        400: white,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+    ),
+);
+
+$cards-palette: (
+    50: #e7e8ec,
+    100: #b6b9c5,
+    200: #9297a9,
+    300: #606782,
+    400: #41496a,
+    500: #121c45,
+    600: #10193f,
+    700: #0d1431,
+    800: #0a0f26,
+    900: #080c1d,
+    contrast: (
+        50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
+        300: white,
+        400: white,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+    ),
+);
+
+$violet-palette: (
+    50: #f7f3fc,
+    100: #e6daf4,
+    200: #d9c9ef,
+    300: #c8b0e8,
+    400: #bda1e3,
+    500: #ad89dc,
+    600: #9d7dc8,
+    700: #7b619c,
+    800: #5f4b79,
+    900: #493a5c,
+    contrast: (
+        50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
+        300: white,
+        400: white,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+    ),
+);
+
+$labels-palette: (
+    50: #ecf2fb,
+    100: #c3d5f4,
+    200: #a6c1ee,
+    300: #7ea5e6,
+    400: #6593e1,
+    500: #3e78da,
+    600: #386dc6,
+    700: #2c559b,
+    800: #224278,
+    900: #1a325c,
+    contrast: (
+        50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
+        300: rgba(black, 0.87),
+        400: white,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+    ),
+);
+
+$text-palette: (
+    50: #fbfbfb,
+    100: #f3f3f3,
+    200: #ededed,
+    300: #e4e4e4,
+    400: #dfdfdf,
+    500: #d7d7d7,
+    600: #c4c4c4,
+    700: #999999,
+    800: #767676,
+    900: #5a5a5a,
+    contrast: (
+        50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
+        300: rgba(black, 0.87),
+        400: rgba(black, 0.87),
+        500: rgba(black, 0.87),
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+    ),
+);
+
+$cards: mat.define-palette($cards-palette);
+$background: mat.define-palette($background-palette);
+$violet: mat.define-palette($violet-palette);
+$labels: mat.define-palette($labels-palette);
+$text: mat.define-palette($text-palette);
+
+// Typography
+$app-typography: mat.define-typography-config(
+    $font-family: 'Lato',
+);
+
+$my-theme: mat.define-light-theme(
+    (
+        color: (
+            warn: $text,
+            primary: $violet,
+            accent: $labels,
+        ),
+        typography: $app-typography,
+        density: 0,
+    )
+);

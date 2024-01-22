@@ -1,0 +1,103 @@
+<section class="container">
+    <div class="body">
+        <div class="img-container">
+            <img class="logo" src="../../assets/icon-bi360.png" alt="" />
+        </div>
+
+        <div class="header">
+            <h3 class="title">Reestablecer contraseña</h3>
+            <span class="subtitle description-2">
+                Por favor, cree una nueva contraseña segura para su
+                cuenta.</span
+            >
+        </div>
+
+        <form [formGroup]="form">
+            <div class="login-input">
+                <label class="full-size">Contraseña</label>
+                <div class="password">
+                    <input
+                        matInput
+                        class="pass-input"
+                        [type]="hidePassword1 ? 'password' : 'text'"
+                        formControlName="password1"
+                        placeholder="Escribe aquí"
+                    />
+                    <button
+                        mat-icon-button
+                        matSuffix
+                        (click)="togglePasswordVisibility()"
+                        [attr.aria-label]="
+                            hidePassword1
+                                ? 'Mostrar contraseña'
+                                : 'Ocultar contraseña'
+                        "
+                    >
+                        <mat-icon
+                            class="color-d7 view-pass"
+                            *ngIf="hidePassword1"
+                            >visibility</mat-icon
+                        >
+                        <mat-icon
+                            class="color-d7 view-pass"
+                            *ngIf="!hidePassword1"
+                            >visibility_off</mat-icon
+                        >
+                    </button>
+                </div>
+            </div>
+
+            <div class="login-input">
+                <label class="full-size">Contraseña</label>
+                <div class="password">
+                    <input
+                        matInput
+                        class="pass-input"
+                        [type]="hidePassword2 ? 'password' : 'text'"
+                        formControlName="password2"
+                        placeholder="Escribe aquí"
+                    />
+                    <button
+                        mat-icon-button
+                        matSuffix
+                        (click)="togglePasswordVisibility(false)"
+                        [attr.aria-label]="
+                            hidePassword2
+                                ? 'Mostrar contraseña'
+                                : 'Ocultar contraseña'
+                        "
+                    >
+                        <mat-icon
+                            class="color-d7 view-pass"
+                            *ngIf="hidePassword2"
+                            >visibility</mat-icon
+                        >
+                        <mat-icon
+                            class="color-d7 view-pass"
+                            *ngIf="!hidePassword2"
+                            >visibility_off</mat-icon
+                        >
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <div class="actions">
+            <button
+                mat-button
+                class="btn-primary subtitles"
+                (click)="savePass()"
+                [disabled]="form.invalid"
+            >
+                <span> Guardar </span>
+            </button>
+            <button
+                mat-button
+                class="btn-secondary subtitles"
+                routerLink="/login"
+            >
+                <span> Atras </span>
+            </button>
+        </div>
+    </div>
+</section>

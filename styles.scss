@@ -1,0 +1,129 @@
+// In your component's .scss file
+
+@use '@angular/material' as mat;
+@import './theme.scss';
+@import './btns.scss';
+@include mat.core(); // Include Angular Material core styles
+
+// Use Angular Material mixins to style components
+@include mat.all-component-themes($my-theme);
+
+html,
+body {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: mat.get-color-from-palette($background, 500);
+    margin: 0;
+}
+
+h1 {
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 125%;
+    color: mat.get-color-from-palette($cards, 500);
+}
+
+h2 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 140%;
+    color: mat.get-color-from-palette($cards, 500);
+}
+
+h3 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    color: mat.get-color-from-palette($cards, 500);
+}
+
+.subtitles {
+    color: mat.get-color-from-palette($cards, 500);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.description {
+    color: mat.get-color-from-palette($cards, 500);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.description-2 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.small {
+    color: mat.get-color-from-palette($cards, 500);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+textarea:focus-visible {
+    outline: none;
+}
+
+.mat-drawer-content {
+    overflow: hidden auto !important;
+}
+
+.border-none {
+    border: none;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.custom-snackbar-danger {
+    background: #fbbfc3;
+    border-radius: 4px;
+}
+
+.custom-snackbar-normal {
+    background: #f7f3fc;
+    border-radius: 4px;
+}
+
+.mdc-snackbar div.mdc-snackbar__surface {
+    background-color: transparent;
+}
+
+.report-container {
+    height: 100vh;
+    width: 100%;
+}

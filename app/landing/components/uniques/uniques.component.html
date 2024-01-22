@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="content">
+        <span class="content-title"> {{ translate('unique_title') }} </span>
+        <div class="content-body">
+            <div class="body-item" *ngFor="let row of uniques">
+                <div class="item-logo">
+                    <img
+                        src="../../../../assets/uniques/{{ row.img }}"
+                        alt=""
+                    />
+                </div>
+                <div class="item-content">
+                    <span class="item-header">{{ row.title }}</span>
+                    <span class="item-text">{{ row.msg }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

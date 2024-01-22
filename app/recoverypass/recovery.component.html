@@ -1,0 +1,37 @@
+<section class="container">
+    <div class="body">
+        <div class="img-container">
+            <img class="logo" src="../../assets/icon-bi360.png" alt="" />
+        </div>
+
+        <div class="header">
+            <h3 class="title">Recuperar contraseña</h3>
+            <span class="subtitle description-2">
+                Por favor, escribe el email registrado en BI360 para recibir un
+                código de seguridad y crear una contraseña nueva.</span
+            >
+        </div>
+
+        <form [formGroup]="form">
+            <div class="login-input">
+                <label class="full-size">Email</label>
+                <input
+                    class="w-100 form-input"
+                    matInput
+                    type="email"
+                    formControlName="email"
+                    placeholder="Escribe aquí"
+                />
+            </div>
+        </form>
+
+        <div class="actions">
+            <button mat-button class="btn-primary subtitles" [disabled]="form.invalid" (click)="requestRecovery()">
+                <span> Enviar código </span>
+            </button>
+            <button mat-button class="btn-secondary subtitles" routerLink="/login">
+                <span> Atras </span>
+            </button>
+        </div>
+    </div>
+</section>

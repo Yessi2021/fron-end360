@@ -1,0 +1,176 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.title {
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 140%;
+}
+
+.cards {
+    display: flex;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.card:hover {
+    box-shadow: 0 0 0 1px #ad89dc; /* Agrega un efecto de sombra en hover */
+}
+
+/* .card:hover{
+    border: #AD89DC 0.5px solid;
+} */
+
+.center-middle {
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    display: none;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.left {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #121c45;
+}
+
+.card {
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+    border-radius: 12px;
+    background: var(--foundation-cards-cards-500, #121c45);
+    transition: box-shadow 0.2s;
+}
+
+.speech-icon {
+    width: 49px;
+    height: 49px;
+}
+
+.stars {
+    width: 104px;
+    height: 19.02px;
+}
+
+.content {
+    color: #d7d7d7;
+    font-size: 20px;
+    align-self: stretch;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    flex: 1;
+}
+
+hr {
+    fill: rgba(215, 215, 215, 0.9);
+    stroke-width: 1.2px;
+    height: 0px;
+    align-self: stretch;
+    stroke: rgba(215, 215, 215, 0.9);
+    width: 100%;
+}
+
+.business {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.avatar {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    padding: 12.8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 38.4px;
+}
+
+.name {
+    color: #d7d7d7;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+span {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.rol {
+    align-self: stretch;
+    color: #d7d7d7;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: center;
+}
+
+.carousel-large {
+    display: flex;
+}
+
+.card hr {
+    opacity: 1;
+}
+
+@keyframes hideThenShow {
+    0% {
+        opacity: 1;
+    }
+    1% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.card:hover hr {
+    animation: hideThenShow 2s;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .carousel-large {
+        display: none;
+    }
+
+    .carousel {
+        display: flex;
+    }
+}

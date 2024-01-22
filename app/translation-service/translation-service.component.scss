@@ -1,0 +1,73 @@
+/* Utiliza una clase específica para el icono del fondo del select */
+// .select_lang {
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+//   padding: 8px 30px 8px 10px;
+//   font-size: 16px;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+//   background: url('https://w7.pngwing.com/pngs/699/656/png-transparent-foreign-language-language-acquisition-learning-word-spanish-language-word-foreign-language-symbol.png') no-repeat right center;
+//   background-size: 20px;
+//   position: absolute;
+//     top: 2%;
+//     z-index: 100;
+//     left: 31%;
+//     color: blue;
+// }
+
+
+.select_lang {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 8px 30px 8px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: absolute;
+  top: 2%;
+  z-index: 100;
+  left: 31%;
+  color: blue;
+  background-size: 20px;
+}
+
+/* Aplica el fondo dinámicamente */
+.select_lang[ngModel="en"] {
+  background-image: url('https://c0.klipartz.com/pngpicture/764/991/gratis-png-bandera-de-inglaterra-bandera-del-reino-unido-bandera-inglesa-de-gran-bretana-inglaterra.png');
+}
+
+.select_lang[ngModel="es"] {
+  background-image: url('https://w7.pngwing.com/pngs/699/656/png-transparent-foreign-language-language-acquisition-learning-word-spanish-language-word-foreign-language-symbol.png');
+}
+
+
+.select-container {
+  position: relative;
+  display: inline-block;
+}
+
+.select-container::after {
+  content: '\25BC';
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+/* Contenido específico según el idioma seleccionado */
+.mensaje-en,
+.mensaje-es {
+  display: none;
+}
+
+select[value="en"]~.mensaje-en,
+select[value="es"]~.mensaje-es {
+  display: block;
+}

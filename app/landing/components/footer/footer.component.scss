@@ -1,0 +1,117 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    gap: 50px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 26px;
+    width: 100%;
+}
+.address {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    max-width: 414px;
+    flex: 1;
+    span {
+        color: #d7d7d7;
+        font-feature-settings:
+            'clig' off,
+            'liga' off;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.refs {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex-direction: column;
+    flex: 1;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex: 1 0 0;
+    width: 100%;
+    max-width: 390px;
+}
+
+.links-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 26px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    padding-right: 20px;
+}
+
+.copyright {
+    color: #d7d7d7;
+    text-align: center;
+    font-feature-settings:
+        'clig' off,
+        'liga' off;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.title {
+    width: 144px;
+    height: 23.938px;
+    flex-shrink: 0;
+    color: var(--foundation-violet-violet-500, #ad89dc);
+    font-feature-settings:
+        'clig' off,
+        'liga' off;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 100% */
+}
+
+.item-content {
+    color: #d7d7d7;
+    font-feature-settings:
+        'clig' off,
+        'liga' off;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.w-100 {
+    width: 100%;
+}

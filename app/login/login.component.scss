@@ -1,0 +1,170 @@
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--foundation-cards-cards-800, #0a0f26);
+    .content {
+        display: flex;
+        width: 29.625rem;
+        padding: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        border-radius: 0.9375rem;
+        background: var(--foundation-cards-cards-500, #121c45);
+        .img-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.625rem;
+            align-self: stretch;
+            img {
+                height: 4.29075rem;
+            }
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            align-self: stretch;
+            .title {
+                align-self: stretch;
+                color: var(--foundation-texts-texts-50, #fbfbfb);
+                text-align: center;
+                margin: 0;
+            }
+
+            .subtitle {
+                align-self: stretch;
+                color: var(--foundation-violet-violet-50, #f7f3fc);
+                text-align: center;
+            }
+        }
+
+        .container-form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+            align-self: stretch;
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+                align-self: stretch;
+
+                .login-input {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 12px;
+                    align-self: stretch;
+                    label {
+                        color: #d7d7d7;
+                        font-feature-settings:
+                            'clig' off,
+                            'liga' off;
+                        font-family: Lato;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 18px;
+                    }
+
+                    input {
+                        color: #d7d7d7;
+                        outline: none;
+                        font-feature-settings:
+                            'clig' off,
+                            'liga' off;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 18px;
+                        background-color: transparent;
+                        width: calc(100% - 40px);
+                        padding: 11px 11px 11px 24px;
+                        border-radius: 8px;
+                        border: 1px solid
+                            var(--foundation-cards-cards-100, #b6b9c5);
+                    }
+                    .forgot-password {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 10px;
+                        align-self: stretch;
+                        a {
+                            color: var(--foundation-texts-texts-50, #fbfbfb);
+                            text-align: center;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: #ad89dc;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .actions {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                align-self: stretch;
+                button {
+                    align-self: stretch;
+                }
+            }
+
+            .back-home {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                align-self: stretch;
+                a {
+                    color: var(--foundation-texts-texts-50, #fbfbfb);
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+::placeholder {
+    color: var(--foundation-texts-texts-600, #c4c4c4);
+    font-feature-settings:
+        'clig' off,
+        'liga' off;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.password {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    button {
+        position: absolute;
+        right: 5px;
+        color: var(--foundation-cards-cards-100, #b6b9c5);
+    }
+}
+
+.pass-input {
+    padding: 11px 50px 11px 24px !important;
+}
